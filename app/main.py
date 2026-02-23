@@ -13,14 +13,14 @@ async def lifespan(app: FastAPI):
         print("Warning: GitHub token not configured")
     else:
         print("GitHub token configured")
-    
+
     init_db(settings.database_url)
-    
+
     if DB_AVAILABLE:
         print("Database connected successfully")
     else:
         print("Database not available. Using in-memory storage.")
-    
+
     yield
 
 
@@ -28,7 +28,7 @@ app = FastAPI(
     title="GitFolio API",
     description="Backend for GitFolio portfolio generator",
     version="1.0.0",
-    lifespan=lifespan
+    lifespan=lifespan,
 )
 
 app.add_middleware(
@@ -40,7 +40,8 @@ app.add_middleware(
         "https://gitfolio-steel.vercel.app",
         "https://gitfolio-g59co4vp2-abhishek-mj-s-projects.vercel.app",
         "https://gitfolio-six.vercel.app",
-        "https://gitfolio-anj8ztc9q-abhishek-mj-s-projects.vercel.app"
+        "https://gitfolio-anj8ztc9q-abhishek-mj-s-projects.vercel.app",
+        "https://gitfolio-37078ad2c-abhishek-mj-s-projects.vercel.app/",
     ],
     allow_credentials=True,
     allow_methods=["*"],
