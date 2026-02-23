@@ -36,7 +36,9 @@ app.add_middleware(
     allow_origins=[
         "http://localhost:5173",
         "http://localhost:8080",
-        "https://gitfolio-charm.lovable.app"
+        "https://gitfolio-charm.lovable.app",
+        "https://gitfolio-steel.vercel.app",
+        "https://gitfolio-g59co4vp2-abhishek-mj-s-projects.vercel.app"
     ],
     allow_credentials=True,
     allow_methods=["*"],
