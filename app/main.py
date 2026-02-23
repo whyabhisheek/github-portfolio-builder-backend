@@ -31,21 +31,21 @@ app = FastAPI(
     lifespan=lifespan,
 )
 
+from fastapi.middleware.cors import CORSMiddleware
+
 app.add_middleware(
     CORSMiddleware,
     allow_origins=[
         "http://localhost:5173",
         "http://localhost:8080",
-        "https://gitfolio-charm.lovable.app",
-        "https://gitfolio-steel.vercel.app",
-        "https://gitfolio-g59co4vp2-abhishek-mj-s-projects.vercel.app",
-        "https://gitfolio-six.vercel.app",
-        "https://gitfolio-anj8ztc9q-abhishek-mj-s-projects.vercel.app",
-        "https://gitfolio-37078ad2c-abhishek-mj-s-projects.vercel.app/",
+        # ✅ Your current frontend
+        "https://gitfolio-eubk14lsm-abhishek-mj-s-projects.vercel.app",
+        # Optional: production alias
+        "https://gitfolio-git-main-abhishek-mj-s-projects.vercel.app",
+        # If using custom domain later, add it here
     ],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )
-
 app.include_router(portfolio_router, prefix="/api/v1", tags=["Portfolio"])
