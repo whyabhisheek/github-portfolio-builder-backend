@@ -39,7 +39,8 @@ app.add_middleware(
         "https://gitfolio-charm.lovable.app",
         "https://gitfolio-steel.vercel.app",
         "https://gitfolio-g59co4vp2-abhishek-mj-s-projects.vercel.app",
-        "https://gitfolio-six.vercel.app"
+        "https://gitfolio-six.vercel.app",
+        "https://gitfolio-anj8ztc9q-abhishek-mj-s-projects.vercel.app"
     ],
     allow_credentials=True,
     allow_methods=["*"],
